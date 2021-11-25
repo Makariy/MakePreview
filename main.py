@@ -32,6 +32,6 @@ def main():
 if __name__ == '__main__':
 	if not len(sys.argv) > 2:
 		print('Error: you need to specify to directories: <directory_from> <directory_to>')
-		return 
+		exit()
 	main()
 
