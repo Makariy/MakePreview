@@ -14,10 +14,11 @@ def get_preview(file_name):
 	ret, frame = cap.read()
 	while ret:
 		if frames_read == frame_to_take:
+			ret, frame = cap.read()
 			return Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_RGB2BGR), 'RGB')
 
 		frames_read +=1
-		ret, frame = cap.read() 
+		ret, _ = cap.read() 
 
 
 def main():
